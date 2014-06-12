@@ -1,12 +1,12 @@
-# These two functions will create an objects in R that will cache the value of 
+# These two functions will cache the value of 
 # the inverse of a matrix in a different environment.  
-# When the solve function is called (to find the inverse)
+# When the cacheSolve function is called (to find the inverse)
 # the cacheSolve function will first check to see if the inverse has been cached
 # thus saving calculation time.
 
-# This function will create a copy of the matrix in a different environment.
+# This makeCacheMatrix function will create a copy of the matrix in a different environment.
+# Including an inverse matrix in the new environment initialized to NULL.
 # It will return a named list of functions applied to the matrix input 
-# and an inverse matrix initialized to NULL.
 makeCacheMatrix <- function(x = matrix()) {
 	#Initialize the m variable within this function with the value NULL
 	m <- NULL
